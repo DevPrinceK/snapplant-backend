@@ -1,5 +1,4 @@
 from flask import Blueprint, request, jsonify
-from flask import render_template
 from werkzeug.utils import secure_filename
 from . import app
 import os
@@ -7,8 +6,6 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 from tensorflow.keras.models import load_model
 import numpy as np
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
-import io
-import base64
 from . import app
 
 views = Blueprint("views", __name__)
